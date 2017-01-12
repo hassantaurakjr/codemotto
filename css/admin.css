@@ -1,0 +1,47 @@
+#admin-welcome h6 {
+    color: white;
+    font-size: 12px;
+    margin: 16px 0px 0px 0px;
+}
+
+#admin-avatar img {
+    margin: 16px;
+    width: 54px;
+    height: 54px;
+}
+
+#admin-avatar img:hover {
+    cursor: pointer;
+}
+
+#admin-dropdown {
+    min-width: 292px;
+    max-width: 292px;
+}
+
+#admin-dropdown ul {
+    position: relative;
+}
+
+
+
+.textarea-explanation {
+    min-width: auto;
+    max-width: auto;
+    min-height: 112px;
+    max-height: auto;
+}
+
+.textarea-code {
+    min-width: auto;
+    max-width: auto;
+    min-height: 512px;
+    max-height: auto;
+}
+
+.textarea-comment {
+    min-width: auto;
+    max-width: auto;
+    min-height: 64px;
+    max-height: auto;
+}

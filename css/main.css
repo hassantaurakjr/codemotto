@@ -1,0 +1,593 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+#main-area {
+    background-color: #424242;
+    box-shadow: 2px 2px 16px 8px rgba(0, 0, 0, 0.2);
+}
+
+#main-top-bar {
+    min-height: 112px;
+    max-height: 112px;
+    background-color: #212121;
+}
+
+#top-right-menu {
+    margin: 28px 0px 0px 0px;
+}
+
+#main-orbit {
+    min-width: auto;
+    max-width: auto;
+    min-height: 492px;
+    max-height: 492px;
+    background-color: white;
+}
+
+#main-poster div {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 512px;
+    max-height: auto;
+    padding: 0px;
+    background-size: cover;
+    background-image: url(../images/poster2.jpg);
+    background-repeat: no-repeat;
+}
+
+.main-poster .poster {
+    position: relative;
+    
+}
+
+.orbit {
+    background-color: transparent;
+}
+
+.orbit-slide img {
+    min-width: auto;
+    max-width: auto;
+    min-height: 388px;
+    max-height: 388px;
+}
+
+.orbit-caption div {
+    min-width: auto;
+    max-width: auto;
+    min-height: 224px;
+    max-height: 224px;
+    padding: 16px 224px 16px 224px;
+}
+
+#main-invitation {
+    min-width: auto;
+    max-width: auto;
+    min-height: 512px;
+    max-height: auto;
+    background-color: white;
+}
+
+#main-members {
+    min-width: auto;
+    max-width: auto;
+    min-height: 512px;
+    max-height: auto;
+    background-color: #424242;
+}
+
+#main-footer {
+    min-width: auto;
+    max-width: auto;
+    min-height: auto;
+    max-height: auto;
+    padding: 24px;
+}
+
+
+
+
+
+
+
+/* Upper Menu Design */
+
+#upper-menu {
+    
+}
+
+#upper-menu .menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 100%;
+    max-width: auto;
+    min-height: 48px;
+    max-height: 48px;
+    background-color: #5f5f5f;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+
+#upper-menu .menu-list #logout-container {
+    flex: 1;
+    flex-grow: 1;
+}
+
+#upper-menu .menu-list #logout-container a {
+    margin: 0px 8px 0px 0px;
+    color: #424242;
+    font-weight: 700;
+}
+
+#upper-menu .menu-list a {
+    padding: 12px 16px 12px 16px;
+    color: #BDBDBD;
+}
+
+#upper-menu .menu-list .active {
+    background-color: #424242;
+    color: #2199e8;
+}
+
+
+
+
+
+
+#main-content {
+    padding: 24px 0px 24px 0px;
+    background-color: white;
+}
+
+
+
+
+
+
+/* Login Page Design */
+
+#login-area {
+    margin: 8px 0px 112px 0px;
+}
+
+#register-area {
+    margin: 8px 0px 112px 0px;
+}
+
+.forgot-password {
+    font-size: 0.9em;
+    color: #9E9E9E;
+    padding: 0px 0px 16px 16px;
+}
+
+.forgot-password:hover {
+    cursor: pointer;
+    color: #757575;
+}
+
+
+
+
+
+
+/* Register Page Design */
+
+.gender-list {
+    
+}
+
+.gender-item {
+    list-style: none;
+}
+
+.gender-label {
+    margin: 0px 8px 0px 8px;
+}
+
+.agree-term-label {
+    margin: 24px 0px 0px 0px;
+}
+
+.register-avatar {
+    margin: 48px 48px 24px 48px;
+}
+
+#browse-avatar-btn {
+    margin: 0px 0px 64px 0px;
+}
+
+.username-box {
+    margin: 8px 0px 24px 0px;
+}
+
+.username-box div {
+    padding: 24px 0px 16px 0px;
+}
+
+.avatar-subheader {
+    margin: 24px 0px 0px 0px;
+}
+
+
+
+
+
+
+
+/* Register2 Page Design */
+
+.register-avatar {
+    min-width: 154px;
+    max-width: 154px;
+    min-height: 154px;
+    max-height: 154px;
+}
+
+#browse-file-btn {
+    margin: 0px 0px 64px 0px;
+}
+
+
+
+
+
+
+
+/* Register3 Page Design */
+
+#confirmation-header {
+    margin: 24px 0px 0px 0px;
+}
+
+#confirmation-area {
+    margin: 24px 0px 64px 0px;
+}
+
+.confirmation-code {
+    margin: 24px 0px 0px 0px;
+}
+
+
+
+
+
+
+/* Top Avatar Layout */
+
+#top-welcome h6 {
+    color: white;
+    font-size: 12px;
+    margin: 16px 0px 0px 0px;
+}
+
+#top-avatar img {
+    margin: 16px;
+    width: 54px;
+    height: 54px;
+}
+
+#top-avatar img:hover {
+    cursor: pointer;
+}
+
+#top-dropdown {
+    min-width: 292px;
+    max-width: 292px;
+}
+
+#top-dropdown ul {
+    position: relative;
+}
+
+
+
+
+
+
+
+
+/* Discussion Layout */
+
+.discussion-header {
+    font-size: 1.8em;
+    padding: 8px 0px 0px 16px;
+}
+
+.discussion-list {
+    
+}
+
+.discussion-item {
+    list-style: none;
+    padding: 0px 0px 24px 0px;
+}
+
+.discussion-item .avatar {
+    margin: 16px;
+    width: 72px;
+    height: 72px;
+}
+
+.discussion-item .avatar:hover {
+    cursor: pointer;
+}
+
+.discussion-item .discussion {
+    font-size: 1.3em;
+}
+
+.discussion-item .posted-by {
+    
+}
+
+.discussion-item .posted-time {
+    
+}
+
+.discussion-item .views-number {
+    
+}
+
+.discussion-item .answers-number {
+    
+}
+
+.discussion-item .explanation {
+    
+}
+
+.discussion-item .explanation-input {
+    min-width: auto;
+    max-width: auto;
+    min-height: 112px;
+    max-height: auto;
+}
+
+.discussion-item .computer-code {
+    border-radius: 2px;
+    border-width: 0px 0px 0px 10px;
+    border-color: #BDBDBD;
+    border-style: solid;
+    background-color: #EEEEEE;
+    padding: 0px 0px 0px 10px;
+}
+
+.discussion-item .code-input {
+    min-width: auto;
+    max-width: auto;
+    min-height: 512px;
+    max-height: auto;
+}
+
+.discussion-item .computer-code pre {
+    color: #757575;
+}
+
+
+
+
+
+
+
+.little-link {
+    padding: 0px 0px 0px 24px;
+    font-size: 0.8em;
+}
+
+.side-nav-category {
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* Delete Discussion Reveal Design */
+
+#delete-discussion-reveal {
+    
+}
+
+#delete-discussion-reveal .header {
+    margin: 0px 0px 24px 0px;
+}
+
+#delete-discussion-reveal .discussion {
+    font-size: 1.3em;
+}
+
+#delete-discussion-reveal .posted-by {
+    
+}
+
+#delete-discussion-reveal .posted-time {
+    
+}
+
+#delete-discussion-reveal .no-button {
+    margin: 24px 16px 8px 16px;
+}
+
+#delete-discussion-reveal .yes-button {
+    margin: 24px 8px 8px 16px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Delete Discussion Reveal Design */
+
+#delete-answer-reveal {
+    
+}
+
+#delete-answer-reveal .header {
+    margin: 0px 0px 24px 0px;
+}
+
+#delete-answer-reveal .discussion {
+    font-size: 1.3em;
+}
+
+#delete-answer-reveal .posted-by {
+    
+}
+
+#delete-answer-reveal .posted-time {
+    
+}
+
+#delete-answer-reveal .no-button {
+    margin: 24px 16px 8px 16px;
+}
+
+#delete-answer-reveal .yes-button {
+    margin: 24px 8px 8px 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Answer Layout Design */
+
+.answer-header {
+    font-size: 1.8em;
+    padding: 8px 0px 0px 16px;
+}
+
+.answer-list {
+    
+}
+
+.answer-item {
+    list-style: none;
+}
+
+.answer-item .avatar {
+    margin: 16px;
+    width: 72px;
+    height: 72px;
+}
+
+.answer-item .avatar:hover {
+    cursor: pointer;
+}
+
+.answer-item .posted-by {
+    
+}
+
+.answer-item .posted-time {
+    
+}
+
+.answer-item .explanation {
+    
+}
+
+.answer-item .explanation-input {
+    min-width: auto;
+    max-width: auto;
+    min-height: 112px;
+    max-height: auto;
+}
+
+.answer-item .computer-code {
+    border-radius: 2px;
+    border-width: 0px 0px 0px 10px;
+    border-color: #BDBDBD;
+    border-style: solid;
+    background-color: #EEEEEE;
+    padding: 0px 0px 0px 10px;
+}
+
+.answer-item .computer-code pre {
+    color: #757575;
+}
+
+.answer-item .code-input {
+    min-width: auto;
+    max-width: auto;
+    min-height: 512px;
+    max-height: auto;
+}
+
+.answer-item .suggestion-area {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.answer-item .resources-area .resources-list {
+    
+}
+
+.answer-item .resources-area .resources-list .resources-item {
+    list-style: none;
+}
+
+.answer-item .resources-list .resources-item {
+    list-style: none;
+}
+
+.answer-item .comment-area {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.answer-item .comment-area .comment-list {
+    
+}
+
+.answer-item .comment-area .comment-list .comment-item {
+    list-style: none;
+}
+
+.answer-item .comment-area .comment-list .comment-item .avatar {
+    margin: 0px 0px 24px 0px;
+    width: 48px;
+    height: 48px;
+}
+
+.answer-item .comment-area .comment-list .comment-item .comment {
+    font-size: 0.8em;
+}
+
+.answer-item .comment-area .commentator {
+    
+}
+
+.answer-item .comment-area .commentator .avatar {
+    margin: 0px 0px 24px 0px;
+    width: 48px;
+    height: 48px;
+}
+
+.answer-item .comment-area .commentator .commentator-input {
+
+}
