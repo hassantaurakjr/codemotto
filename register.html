@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>codemotto.edu.ph</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <link rel="stylesheet" href="assets/foundation/foundation-flex.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        
+        <div class="row">
+            <div id="main-area" class="small-12 medium-12 large-12 columns">
+                
+                <div id="main-top-bar" class="row align-middle">
+                    <div class="small-12 medium-12 large-12 columns">
+                        <div class="top-bar">
+                            <div class="top-bar-left">
+                                <a href="#"><img data-interchange="[images/logo-small.png, small], [images/logo-medium.png, medium], [images/logo-large.png, large]"></a>
+                            </div>
+                            <div class="top-bar-right">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /End Tob Bar -->
+                
+                <div id="upper-menu" class="row align-middle">
+                    <div class="menu-list">
+                        <a href="index.html" class="">Home</a>
+                        <a href="discussion.html" class="">Discussion</a>
+                    </div>
+                </div><!-- /End Upper Menu -->
+                
+                <div id="main-content" class="row">
+                    <div class="small-12 medium-12 large-12 columns">
+                        
+                        <div id="register-area"  class="row align-center">
+                            <div class="small-12 medium-6 large-4 columns">
+                                <div class="row">
+                                    <h4 class="category-title">Create Account</h4>
+                                </div>  
+                                <div class="row align-center">
+                                    <div class="small-12 medium-10 large-10 columns">
+                                        
+                                        <!-- Register Form -->
+                                        <div id="register-form">
+                                            
+                                            <label id="register-email-label"> Email
+                                                <input class="email-input" type="email" placeholder="myemail@yahoo.com" required>
+                                                <span id="register-email-error" class="form-error">
+                                                    Please enter your correct email address
+                                                </span>
+                                            </label>
+                                            <label id="register-username-label"> Username
+                                                <input class="username-input" type="text" placeholder="Moonrider" required>
+                                                <span id="register-username-error" class="form-error">
+                                                    Please enter your username above.
+                                                </span>
+                                                <span id="register-username-error2" class="form-error">
+                                                    Someone already used that username.
+                                                </span>
+                                            </label>
+                                            <label id="register-password-label"> Password 
+                                                <p><small>Your password must be atleast 6 characters long.</small></p>
+                                                <input class="password-input" type="password" placeholder="riderPassword" required>
+                                                <span id="register-password-error" class="form-error">
+                                                    Please enter your password above.
+                                                </span>
+                                            </label>
+                                            <label id="register-confirm-label"> Confirm Password
+                                                <input class="confirm-input" type="password" placeholder="riderPassword">
+                                                <span id="register-confirm-error" class="form-error">
+                                                    Password do not match.
+                                                </span>
+                                            </label>
+                                            <h6 class="subheader">Gender</h6>
+                                            <ul class="gender-list">
+                                                <li class="gender-item">
+                                                    <label class="gender-label float-right">
+                                                        <input type="radio" name="female" value="female">
+                                                        Female
+                                                    </label>
+                                                </li>
+                                                <li class="gender-item">
+                                                    <label class="gender-label float-right">
+                                                        <input type="radio" name="male" value="male">
+                                                        Male
+                                                    </label>
+                                                </li>
+                                                <li class="gender-item">
+                                                    <label class="gender-label">
+                                                        <input type="radio" name="unspecified" value="unspecified" checked>
+                                                        Unspecified
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <label>
+                                                <input data-toggle="register-submit-btn" type="checkbox" name="agree-term">
+                                                I agree to the <a href="termofuse.html">terms of services</a>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="agree-policy">
+                                                I agree to the <a href="privacypolicy.html">privacy policy</a>
+                                            </label>
+                                            <button id="register-submit-btn" onclick="submit()" data-toggler=".disabled" class="button disabled float-right">Next</button>
+                                        
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div><!-- /End Main Content -->
+                
+                <div id="main-footer" class="row">
+                    <div class="small-12 medium-12 large-12 columns">
+                        <div class="row hide-for-small-only">
+                            <img src="images/code-dreamer.png">
+                        </div>
+                        <div class="row align-middle">
+                            <div class="small-12 medium-12 large-6 columns">
+                                 <h6><small>© Copyright 2016 - <a href="#">blacktheme.com.ph</a> | created by <a href="#">Code Dreamer Group</a></small></h6>
+                            </div>
+                            <div class="small-12 medium-6 large-6 columns show-for-large">
+                                <ul class="menu align-right">
+                                    <li><a href="#"><img class="thumbnail-round" src="images/behance-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/dribbble-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/envato-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/facebook-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/github-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/google-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/rss-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/twitter-24.png"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /End Footer -->
+
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="assets/jquery.js"></script>
+        <script type="text/javascript" src="assets/foundation/foundation.js"></script>
+        <script type="text/javascript">
+            $(document).foundation();
+        </script>
+        <script type="text/javascript">
+            
+            var gender = 'unspecified';
+            
+            $(".email-input").focusin(function() {
+                $('#register-email-label').removeClass("is-invalid-label");
+                $(".email-input").removeClass('is-invalid-input');
+                $('#register-email-error').removeClass('is-visible');
+            });
+
+            $(".username-input").focusin(function() {
+                $('#register-username-label').removeClass('is-invalid-label');
+                $('#register-username-error').removeClass('is-visible');
+                if ($(".email-input").val() == null || $(".email-input").val() == "") {
+                    $('#register-email-label').addClass("is-invalid-label");
+                    $(".email-input").addClass('is-invalid-input');
+                    $('#register-email-error').addClass('is-visible');
+                    $('#register-email-error2').addClass('is-visible');
+                }
+                else {
+                    $('#register-email-label').removeClass("is-invalid-label");
+                    $(".email-input").removeClass('is-invalid-input');
+                    $('#register-email-error').removeClass('is-visible');
+                }
+            });
+
+            $(".password-input").focusin(function() {
+                $('#register-password-label').removeClass('is-invalid-label');
+                $('#register-password-error').removeClass('is-visible');
+                if ($(".username-input").val() == null || $(".username-input").val() == "") {
+                    $('#register-username-label').addClass("is-invalid-label");
+                    $(".username-input").addClass('is-invalid-input');
+                    $('#register-username-error').addClass('is-visible');
+                }
+                else {
+                    $('#register-username-label').removeClass("is-invalid-label");
+                    $(".username-input").removeClass('is-invalid-input');
+                    $('#register-username-error').removeClass('is-visible');
+                }
+            });
+
+            $(".confirm-input").focusin(function() {
+                $('#register-confirm-label').removeClass('is-invalid-label');
+                $('#register-confirm-error').removeClass('is-visible');
+                if ($(".password-input").val() == null || $(".password-input").val() == "") {
+                    $('#register-password-label').addClass("is-invalid-label");
+                    $(".password-input").addClass('is-invalid-input');
+                    $('#register-password-error').addClass('is-visible');
+                }
+                else {
+                    $('#register-password-label').removeClass("is-invalid-label");
+                    $(".password-input").removeClass('is-invalid-input');
+                    $('#register-password-error').removeClass('is-visible');                     
+                }                          
+            });
+
+            $(".confirm-input").focusout(function() {
+                if ($(".password-input").val() != $(".confirm-input").val()) {
+                    $('#register-confirm-label').addClass("is-invalid-label");
+                    $(".confirm-input").addClass('is-invalid-input');
+                    $('#register-confirm-error').addClass('is-visible');
+                }
+                else {
+                    $('#register-confirm-label').removeClass("is-invalid-label");
+                    $(".confirm-input").removeClass('is-invalid-input');
+                    $('#register-confirm-error').removeClass('is-visible');
+                }
+            });
+
+            $(".gender-list .gender-item .gender-label input").focusin(function() {
+                $('.gender-list .gender-item .gender-label input').attr("checked", false);
+                $(this).attr("checked", true);
+                gender = $(this).val();
+            });
+            
+            function submit() {
+                if ($('#register-submit-btn').hasClass('disabled') == false) {
+                    if ($('.email-input').val() == null || $('.email-input').val() == "") {
+                        $('#register-email-label').addClass("is-invalid-label");
+                        $(".email-input").addClass('is-invalid-input');
+                        $('#register-email-error').addClass('is-visible');
+                    }
+                    else if ($('.username-input').val() == null || $('.username-input').val() == "") {
+                        $('#register-username-label').addClass("is-invalid-label");
+                        $(".username-input").addClass('is-invalid-input');
+                        $('#register-username-error').addClass('is-visible');
+                    }
+                    else if ($('.password-input').val() == null || $('.password-input').val() == "") {
+                        $('#register-password-label').addClass("is-invalid-label");
+                        $(".password-input").addClass('is-invalid-input');
+                        $('#register-password-error').addClass('is-visible');
+                    }
+                    else if ($('.confirm-input').val() == null || $('.confirm-input').val() == "") {
+                        $('#register-confirm-label').addClass("is-invalid-label");
+                        $(".confirm-input").addClass('is-invalid-input');
+                        $('#register-confirm-error').addClass('is-visible');
+                    }
+                    else if ($('.password-input').val() != $('.confirm-input').val()) {
+                        $('#register-confirm-label').addClass("is-invalid-label");
+                        $(".confirm-input").addClass('is-invalid-input');
+                        $('#register-confirm-error').addClass('is-visible');
+                    }
+                    else {
+                        $.post('php/session_reg.php',
+                            {
+                                new_email: $('.email-input').val(),
+                                new_username: $('.username-input').val(),
+                                new_password: $('.password-input').val(),
+                                new_gender: gender
+                            },
+                            function(data, status) {
+                                if (String(data) == 'invalid-email') {
+                                    $('#register-email-label').addClass("is-invalid-label");
+                                    $(".email-input").addClass('is-invalid-input');
+                                    $('#register-email-error').addClass('is-visible');
+                                }
+                                else if (String(data) == 'conflict-username') {
+                                    $('#register-username-label').addClass("is-invalid-label");
+                                    $(".username-input").addClass('is-invalid-input');
+                                    $('#register-username-error2').addClass('is-visible');
+                                }
+                                else {
+                                    if (String(data) == 'error') {
+                                        console.log('FAILED: sending partial registration to the server.');
+                                    }
+                                    else {
+                                        console.log('SUCCESS: sending partial registration to the server.');
+                                        $("[name='agree-term']").click();
+                                        window.location.assign('register2.html');
+                                    }   
+                                }
+                            }
+                        );  
+                    }
+                }
+                else {
+                    console.log('Button is disabled: Do nothing!');
+                }
+            }
+            
+//            $('#register-submit-btn').click(function() {
+//                
+//            });
+        </script>
+    </body>
+    <footer>
+    </footer>
+</html>

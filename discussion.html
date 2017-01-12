@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>codemotto.edu.ph</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <link rel="stylesheet" href="assets/foundation/foundation-flex.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    <body>
+        
+        <div class="row">
+            <div id="main-area" class="small-12 medium-12 large-12 columns">
+                
+                <div id="main-top-bar" class="row align-middle">
+                    <div class="small-6 medium-6 large-6 columns">
+                        <a href="#"><img data-interchange="[images/logo-small.png, small], [images/logo-medium.png, medium], [images/logo-large.png, large]"></a>
+                    </div>
+                    <div class="small-6 medium-6 large-6 columns">
+                        <ul id="registered-member" class="menu align-right hide">
+                            <li id="top-welcome" class="show-for-medium"><h6><span class="username">Username</span><br><span class="usertype">Forum Administrator</span></h6></li>
+                            <li id="top-avatar">
+                                <img class="thumbnail-round" src="images/user-image.jpg" alt="User Image">  
+                            </li>                   
+                        </ul>
+                        <div id="responsive-menu" class="hide">
+                            <div class="top-bar-right">
+                                <ul id="top-right-menu" class="menu align-right">
+                                    <li><a href="login.html" class="button hollow secondary"><small>LOGIN</small></a></li>
+                                    <li><a href="register.html" class="button hollow secondary"><small>CREATE ACCOUNT</small></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /End Tob Bar -->
+                
+                <div id="upper-menu" class="row align-middle">
+                    <div class="menu-list">
+                        <a href="index.html" class="">Home</a>
+                        <a class="active">Discussion</a>
+                        <div id="logout-container" class="hide">
+                            <a href="index.html" class="button alert float-right">Log Out</a>
+                        </div>
+                    </div>
+                    
+                    
+                </div><!-- /End Upper Menu -->
+                
+                <div id="main-content" class="row">
+                    
+                    <div class="small-12 medium-8 large-8 columns">
+                        
+                        <div class="row">
+                            <div class="columns">
+                                <h3 class="discussion-header">Recent Discussion</h3>
+                            </div>
+                            <div class="columns">
+                                <a id="new-discussion-button" href="new_discussion.html" class="button large warning float-right hide">New Discussion</a>
+                            </div>
+                        </div>    
+                        <hr>
+                        <ul class="discussion-list"> 
+                            <!-- Each discussion item will iterate here. -->
+                        </ul>
+                        
+                        <!-- Hidden Discussion Item Model. -->
+                        <li id="discussion-item-model" class=" hide">
+                            
+                            <div class="discussion-item row">
+                                <div class="small-12 medium-0 large-2 columns show-for-large">
+                                    <img class="avatar thumbnail-round" src="images/user-image.jpg" alt="User Image">
+                                </div>
+                                <div class="small-12 medium-12 large-10 columns">
+                                    <a class="discussion">Discussion Statement</a>
+                                    <h6>
+                                        <small>Posted by: <a class="posted-by">Alias Warrior</a> on <span class="posted-time">October 5, 2016</span></small>
+                                        <a href="#"><strong class="little-link"><span class="views-number"></span> Views</strong></a>
+                                        <a><strong class="little-link"><span class="answers-number"></span> Answers</strong></a>
+                                    </h6>
+                                    <button class="answer-button button small">Answer</button>
+                                    <button class="delete-button button small">Delete</button>
+<!--                                    <button class="edit-button button small">Edit</button>-->
+                                    
+                                </div>
+                            </div>
+                            
+                        </li><!-- /End Hidden code  -->
+                        
+                        <!-- Hidden Delete Reveal Code -->
+                        <div class="hide">
+                            
+                            <button id="reveal-button" data-open="delete-discussion-reveal"></button>
+                            
+                            <div id="delete-discussion-reveal" class="reveal medium" data-reveal>  
+                                <h4 class="header subheader">Do you want to delete?</h4>
+                                <div class="row">
+                                    <div class="small-12 medium-12 large-12 columns">
+                                        <a class="discussion">Discussion Statement</a>
+                                        <h6>
+                                            <small>Posted by: <span class="posted-by">Alias Warrior</span> on <span class="posted-time">October 5, 2016</span></small>
+                                            <a><strong class="little-link"><span class="views-number"></span> Views </strong></a>
+                                            <a><strong class="little-link"><span class="answers-number"></span> Answers </strong></a>
+                                        </h6>
+                                        <a class="yes-button float-right" data-close><strong>Yes</strong></a>
+                                        <a class="no-button float-right" data-close><strong>No</strong></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /End Hidden Reveal Code -->
+
+                    </div>
+                    
+                    <div class="small-12 medium-4 large-4 columns hide-for-small-only">
+                        <div class="row">
+                            <h6><strong>DISCUSSION TOPIC</strong></h6>
+                        </div>
+                        <ul class="menu vertical side-nav-list">
+                            <!-- List of topic item. -->
+                        </ul>
+                        
+                        <!-- Hidden topic item. -->
+                        <div id="topic-item-model" class="hide">
+                            <li class="topic-item"><a href="#"></a></li>
+                        </div>
+                        
+                    </div>
+                    
+                </div><!-- /End Main Content -->
+                
+                <div id="main-footer" class="row">
+                    <div class="small-12 medium-12 large-12 columns">
+                        <div class="row hide-for-small-only">
+                            <img src="images/code-dreamer.png">
+                        </div>
+                        <div class="row align-middle">
+                            <div class="small-12 medium-12 large-6 columns">
+                                 <h6><small>© Copyright 2016 - <a href="#">blacktheme.com.ph</a> | created by <a href="#">Code Dreamer Group</a></small></h6>
+                            </div>
+                            <div class="small-12 medium-6 large-6 columns show-for-large">
+                                <ul class="menu align-right">
+                                    <li><a href="#"><img class="thumbnail-round" src="images/behance-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/dribbble-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/envato-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/facebook-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/github-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/google-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/rss-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/twitter-24.png"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /End Footer -->
+
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="assets/jquery.js"></script>
+        <script type="text/javascript" src="assets/foundation/foundation.js"></script>
+        <script type="text/javascript">
+            $(document).foundation();
+        </script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                loadAccountInfo();
+            });
+            
+            var accountInfo = null;
+            
+            function loadAccountInfo() {
+                $.post('php/select_account.php',
+                    {
+                        // none
+                    },
+                    function(data, status) {
+                        if (String(data) == '[]') {
+                            $('#responsive-menu').removeClass('hide');
+                            solveDropdownIssue();
+                        }
+                        else {
+                            $('#registered-member').removeClass('hide');
+                            $('#new-discussion-button').removeClass('hide');
+                            $('#logout-container').removeClass('hide');
+                            
+                            accountInfo = $.parseJSON(data);
+                        
+                            $('#top-welcome').find('.username').text(accountInfo[0].username);
+                            if (accountInfo[0].type == 1) {
+                                $('#top-welcome h6 .usertype').text('Code Dreamer Administrator');
+                            }
+                            else {
+                                $('#top-welcome h6 .usertype').text('Code Dreamer Member');
+                            } 
+                            $('#top-avatar img').attr('src', accountInfo[0].avatar);
+                            solveDropdownIssue();
+                        }
+                    }
+                );
+            }
+
+            function solveDropdownIssue() {
+                $('#top-avatar').children('img').click();
+                $('#top-avatar').children('img').click();
+                fetchTopic();
+            }
+            
+            var topicList = null;
+
+            function fetchTopic() {
+                $.post('php/select_topic.php',
+                    {
+                        // none
+                    },
+                    function(data, status) {
+                        topicList = $.parseJSON(data);
+                        $('#topic-item-model li a').text('Recent Discussion');
+                        $('#topic-item-model li').attr('onclick', 'selectTopic(0, this)');
+                        var topicItem = $('#topic-item-model').html();
+                        $('.side-nav-list').append(topicItem);
+                        for(i=0; i<topicList.length; i++) {
+                            $('#topic-item-model li a').text(topicList[i].topic);
+                            $('#topic-item-model li').attr('onclick', 'selectTopic('+topicList[i].topicId+', this)');
+                            topicItem = $('#topic-item-model').html();
+                            $('.side-nav-list').append(topicItem);
+                        }
+                        autoSelectTopic();
+                    }
+                );    
+            }
+            
+            function autoSelectTopic() {
+                $.post('php/session_ids.php',
+                    {
+                        trigger_function: 'get_topic_id',
+                        selected_id: 0
+                    },
+                    function(data, status) {
+                        if (Number(data) == 0) {
+                            $('.side-nav-list li:first').attr('class', 'active');
+                            $('.side-nav-list li:first').click();
+                        }
+                        else if (Number(data) > 0) {
+                            var topicId = Number(data);
+                            var list = $('.side-nav-list').children();
+                            for (i=0; i<topicList.length; i++) {
+                                if (topicId == Number(topicList[i].topicId)) {
+                                    for (j=0; j<list.length; j++) {
+                                        if (topicList[i].topic == $(list[j]).children('a').text()) {
+                                            $(list[j]).attr('class', 'active');
+                                            $(list[j]).click();
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }   
+                        else {
+                            
+                        }
+                    }
+                );
+            }
+                
+            function selectTopic(topicId, li) {
+                if (topicId == 0) {
+                    $('.discussion-header').text('Recent Discussion');
+                }
+                else {
+                    $('.discussion-header').text($(li).children('a').text() + ' Discussion');
+                }
+                $('.side-nav-list li').attr('class', 'inactive');
+                $(li).attr('class', 'active');
+                $.post('php/session_ids.php',
+                    {
+                        trigger_function: 'set_topic_id',
+                        selected_id: topicId
+                    },
+                    function(data, status) {
+                        if (Number(data) > 0) {
+                            console.log('SUCCESS! Sending topic id to the server.');
+                        }
+                        else {
+                            console.log('FAILED! Sending topic id to the server.');
+                        }
+                    }
+                );
+                fetchDiscussion(topicId);
+            }
+            
+            var discussionList = null;
+
+            function fetchDiscussion(topicId) {
+                $.post('php/select_discussion.php',
+                    {
+                        topic_id: topicId
+                    },
+                    function(data, status) {
+                        discussionList = $.parseJSON(data);
+                        $('.discussion-list').empty();
+                        for (i=0; i<discussionList.length; i++) {
+                            createDiscussiontItem(discussionList[i]);
+                        }
+                    }
+                );
+            }
+            
+            function createDiscussiontItem(discussion) {
+                $.post('php/select_account_avatar.php',
+                    {
+                        username: discussion.addedBy
+                    },
+                    function(data, status) {
+                        if (String(data) != 'error') {
+                            console.log('SUCCESS! Loading '+discussion.addedBy+' avatar.');
+                            
+                            $('#discussion-item-model .discussion-item .avatar').attr('src', String(data));
+                            $('#discussion-item-model').find('.discussion').text(discussion.discussion);
+                            $('#discussion-item-model').find('.discussion').attr('onclick', 'selectDiscussion('+discussion.discussionId+')');
+                            $('#discussion-item-model').find('.posted-by').text(discussion.addedBy);
+                            $('#discussion-item-model').find('.posted-time').text(discussion.timeAdded);
+                            $('#discussion-item-model').find('.views-number').text(discussion.viewsCounter);
+                            $('#discussion-item-model').find('.answers-number').text(discussion.answersCounter);
+                            $('#discussion-item-model').find('.answers-number').parents('a').attr('onclick', 'selectDiscussion('+discussion.discussionId+')');
+                            
+                            $('#discussion-item-model').find('.answer-button').removeClass('hide');
+                            $('#discussion-item-model').find('.delete-button').removeClass('hide');
+                            $('#discussion-item-model').find('.edit-button').removeClass('hide');
+                            
+                            if (accountInfo == null) {
+                                $('#discussion-item-model').find('.answer-button').addClass('hide');
+                                $('#discussion-item-model').find('.delete-button').addClass('hide');
+                                $('#discussion-item-model').find('.edit-button').addClass('hide');              
+                            }
+                            else {
+                                if (accountInfo[0].type == 1) {
+                                    $('#discussion-item-model').find('.answer-button').attr('onclick', 'answerDiscussion('+discussion.discussionId+')');
+                                    $('#discussion-item-model').find('.delete-button').attr('onclick', 'confirmDelete('+discussion.discussionId+')');   
+                                    $('#discussion-item-model').find('.edit-button').attr('onclick', 'editDiscussion('+discussion.discussionId+')'); 
+                                }
+                                else {
+                                    if (accountInfo[0].username == discussion.addedBy) {
+                                        $('#discussion-item-model').find('.answer-button').attr('onclick', 'answerDiscussion('+discussion.discussionId+')');
+                                        $('#discussion-item-model').find('.delete-button').attr('onclick', 'confirmDelete('+discussion.discussionId+')');
+                                        $('#discussion-item-model').find('.edit-button').attr('onclick', 'editDiscussion('+discussion.discussionId+')'); 
+                                    }   
+                                    else {
+                                        $('#discussion-item-model').find('.answer-button').attr('onclick', 'answerDiscussion('+discussion.discussionId+')');
+                                        $('#discussion-item-model').find('.delete-button').addClass('hide');
+                                        $('#discussion-item-model').find('.edit-button').addClass('hide');
+                                    }
+                                }    
+                            }
+                            
+                            var discussionItem = $('#discussion-item-model').html();
+                            $('.discussion-list').append(discussionItem);
+                        }
+                        else {
+                            console.log('FAILED! Loading '+discussion.addedBy+' avatar.');
+                        }
+                    }
+                );
+            }
+            
+            function selectDiscussion(discussionId) {
+                $.post('php/session_ids.php',
+                    {
+                        trigger_function: 'set_discussion_id',
+                        selected_id: discussionId
+                    },
+                    function(data, status) {
+                        if (Number(data) > 0) {
+                            $.post('php/update_discussion_views_no.php',
+                                {
+                                
+                                },
+                                function(data, status) {
+                                    if (Number(data) == 1) {
+                                        console.log('SUCCESS! Updating discussion views number.');
+                                        window.location.assign('answer.html');          
+                                    }
+                                    else {
+                                        console.log('FAILED! Updating discussion views number.');
+                                    }
+                                }
+                            );
+                        }
+                        else {
+                            console.log('FAILED! Inserting selected discussion id.');
+                        }
+                    }
+                );
+            }
+            
+            function answerDiscussion(discussionId) {
+                $.post('php/session_ids.php',
+                    {
+                        trigger_function: 'set_discussion_id',
+                        selected_id: discussionId
+                    },
+                    function(data, status) {
+                        if (Number(data) > 0) {
+                            window.location.assign('answer_discussion.html');
+                        }
+                        else {
+                            console.log('FAILED! Inserting selected discussion id.');
+                        }
+                    }
+                ); 
+            }
+            
+            function confirmDelete(discussionId) {
+                var discussion = null;
+                for (i=0; i<discussionList.length; i++) {
+                    if (discussionList[i].discussionId == discussionId) {
+                        discussion = discussionList[i];
+                        break;
+                    }
+                }
+                
+                $('#delete-discussion-reveal').find('.discussion').text(discussion.discussion);
+                $('#delete-discussion-reveal').find('.posted-by').text(discussion.addedBy);
+                $('#delete-discussion-reveal').find('.posted-time').text(discussion.timeAdded);
+                $('#delete-discussion-reveal').find('.views-number').text(discussion.viewsCounter);
+                $('#delete-discussion-reveal').find('.answers-number').text(discussion.answersCounter);
+                $('#delete-discussion-reveal').find('.yes-button').attr('onclick', 'deleteDiscussion('+discussion.discussionId+')');
+                
+                $('#reveal-button').click();
+            }
+            
+            function deleteDiscussion(discussionId) {
+                $.post('php/delete_discussion.php',
+                    {
+                        discussion_id: discussionId
+                    },
+                    function(data, status) {
+                        if (String(data) != 'error') {
+                            console.log('SUCCESS! Deleting discussion '+ discussionId);
+                            window.location.assign('discussion.html');
+                        }
+                        else {
+                            console.log('FAILED! Deleting discussion '+ discussionId);   
+                        }
+                    }
+                );
+            }
+            
+            function editDiscussion(discussionId) {
+                alert(discussionId);
+            }
+            
+        </script>
+    </body>
+    <footer>
+    </footer>
+</html>

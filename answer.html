@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>codemotto.edu.ph</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <link rel="stylesheet" href="assets/foundation/foundation-flex.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        
+        <div class="row">
+            <div id="main-area" class="small-12 medium-12 large-12 columns">
+                
+                <div id="main-top-bar" class="row align-middle">
+                    <div class="small-12 medium-12 large-12 columns">
+                        <div class="top-bar">
+                            <div class="top-bar-left">
+                                <a href="#"><img data-interchange="[images/logo-small.png, small], [images/logo-medium.png, medium], [images/logo-large.png, large]"></a>
+                            </div>
+                            <div class="top-bar-right">
+                                <ul id="registered-member" class="menu align-right hide">
+                                    <li id="top-welcome" class="show-for-medium"><h6><span class="username"> Username </span><br><span class="usertype"> User Type </span></h6></li>
+                                    <li id="top-avatar">
+                                        <img class="thumbnail-round" src="images/user-image.jpg" alt="User Image">   
+                                    </li>                   
+                                </ul>
+                                <div id="responsive-menu" class="hide">
+                                    <div class="top-bar-right">
+                                        <ul id="top-right-menu" class="menu align-right">
+                                            <li><a href="login.html" class="button hollow secondary"><small>LOGIN</small></a></li>
+                                            <li><a href="register.html" class="button hollow secondary"><small>CREATE ACCOUNT</small></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /End Tob Bar -->
+                
+                <div id="upper-menu" class="row align-middle">
+                    <div class="menu-list">
+                        <a href="index.html" class="">Home</a>
+                        <a href="discussion.html" class="active">Discussion</a>
+                        <div id="logout-container" class="hide">
+                            <a href="index.html" class="button alert float-right">Log Out</a>
+                        </div>
+                    </div>
+                </div><!-- /End Upper Menu -->
+                
+                <div id="main-content" class="row">
+                    
+                    <div class="small-12 medium-8 large-8 columns">
+                        <div class="row">
+                            <div class="columns">
+                                <h3 class="discussion-header">Discussion</h3>
+                            </div>
+                            <div class="columns">
+<!--                                <a id="new-discussion-button" href="new_discussion.html" class="button large secondary float-right hide">Create Discussion</a>-->
+                            </div>
+                        </div>              
+                        <hr>
+                        <ul class="discussion-list"> 
+                            <li class="discussion-item">
+                                <div class="row">
+                                    <div class="small-12 medium-2 large-2 columns show-for-large">
+                                        <img class="avatar thumbnail-round" src="images/user-image.jpg" alt="User Image">
+                                    </div>
+                                    <div class="small-12 medium-10 large-10 columns">
+                                        <a class="discussion">What is the matter with you man and your work man and you?</a>
+                                        <h6>
+                                            <small>Posted by: <a class="posted-by">Alias Warrior</a> on <span class="posted-time">October 5, 2016</span></small>
+                                            <a href="#"><strong class="little-link"><span class="views-number"></span> Views</strong></a>
+                                            <a href="user_answer.html"><strong class="little-link"><span class="answers-number"></span> Answers</strong></a>
+                                        </h6>
+                                        <p class="explaination"></p>
+                                        <div class="computer-code">
+                                            <pre></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            
+                        <div class="row">
+                            <h3 class="answer-header subheader">0 Answer</h3>
+                        </div>
+                        <hr>
+                        <ul class="answer-list">
+                            <!-- Answer items goes here. -->
+                        </ul>
+                        
+                        <!-- Hidden Answer Item Model -->
+                        <div id="answer-item-model" class="hide">
+                            <li id="#" class="answer-item row">
+                                <div class="small-12 medium-2 large-2 columns show-for-large">
+                                    <img class="avatar thumbnail-round" src="images/user-image.jpg" alt="User Image">
+                                </div>
+                                <div class="small-12 medium-10 large-10 columns">
+                                    
+                                    <div class="row">
+                                        <div class="columns">
+                                            <h6 class="subheader"><small> Posted by <a class="posted-by">John The Man</a> on <span class="posted-time">October 18, 2016</span></small></h6>
+                                        </div>
+                                        <div class="small-6 medium-4 large-2 columns">
+                                            <a id="delete-answer-button" onclick="confirmDeleteAnswer(this)" class="float-right hide"><strong>Delete</strong></a>
+                                            <!-- Hidden Delete Reveal Code -->
+                                            <div class="hide">
+
+                                                <button id="delete-reveal-button" data-open="delete-answer-reveal"></button>
+
+                                                <div id="delete-answer-reveal" class="reveal medium" data-reveal>  
+                                                    <h4 class="header subheader">Do you want to delete?</h4>
+                                                    <div class="row">
+                                                        <div class="small-12 medium-12 large-12 columns">
+                                                            <p class="answer">Answer Statement Here</p>
+                                                            <h6>
+                                                                <small>Posted by: <a class="posted-by"> Username </a> on <span class="posted-time"> DateTime </span></small>
+                                                            </h6>
+                                                            <a class="yes-button float-right" data-close><strong>Yes</strong></a>
+                                                            <a class="no-button float-right" data-close><strong>No</strong></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- /End Hidden Reveal Code -->
+                                        </div>
+                                    </div><!-- Details Area -->
+                                    <p class="explanation">
+                                    </p><!-- Explanation Area -->
+                                    <div class="computer-code">
+                                        <pre></pre>
+                                    </div><!-- Code Area -->
+
+                                    <div class="resources-area">
+                                        <h5 class="subheader">Resources</h5>
+                                        <div class="resources-list">
+                                            <!-- Resources item goes here. -->
+                                        </div>
+                                         <!-- Hidden Resources Item Model. -->
+                                        <div id="resources-item-model" class="hide">
+                                            <div class="resources-item"><a href="#"></a></div>    
+                                        </div>
+                                    </div><!-- Suggestion Area -->
+                                    
+                                    <div class="comment-area">
+                                        <h5 class="subheader">Comments</h5>
+                                        <div class="comment-list">
+                                            <!-- Comment items goes here -->
+                                        </div>
+                                        <!-- Hidden Comment Item Model -->
+                                        <div id="comment-item-model" class="hide">
+                                            <div class="comment-item">
+                                                <div class="row align-right">
+                                                    <div class="medium-3 large-2 columns show-for-medium">
+                                                        <img class="avatar thumbnail-round" width="48px" src="images/user-image.jpg" alt="Comment User Image">
+                                                    </div>
+                                                    <div class="columns">
+                                                        <a><small class="comment-posted-by"></small></a>
+                                                        <p class="comment"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="commentator">
+                                            <div class="row">
+                                                <div class="small-2 medium-2 large-2 columns show-for-large">
+                                                    <img class="avatar thumbnail-round" src="images/user-image.jpg" alt="Comment User Image">
+                                                </div>
+                                                <div class="columns">
+                                                    <input class="commentator-input" type="text">  
+                                                </div>
+                                                <div class="small-12 medium-2 large-2 columns">
+                                                    <button onclick="submitComment(this)" class="button">Comment</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- Comment Area -->
+                                    
+                                </div>
+                            </li>
+                            <hr>
+                        </div>
+                    </div>
+                    
+                    <div class="small-12 medium-4 large-4 columns hide-for-small-only">
+                        <div class="row">
+                            <h6><strong>DISCUSSION TOPIC</strong></h6>
+                        </div>
+                        <ul class="menu vertical side-nav-list">
+                            <!-- List of topic item. -->
+                        </ul>
+                        
+                        <!-- Hidden topic item. -->
+                        <div id="topic-item-model" class="hide">
+                            <li class="topic-item"><a></a></li>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div id="main-footer" class="row">
+                    <div class="small-12 medium-12 large-12 columns">
+                        <div class="row hide-for-small-only">
+                            <img src="images/code-dreamer.png">
+                        </div>
+                        <div class="row align-middle">
+                            <div class="small-12 medium-12 large-6 columns">
+                                 <h6><small>© Copyright 2016 - <a href="#">blacktheme.com.ph</a> | created by <a href="#">Code Dreamer Group</a></small></h6>
+                            </div>
+                            <div class="small-12 medium-6 large-6 columns show-for-large">
+                                <ul class="menu align-right">
+                                    <li><a href="#"><img class="thumbnail-round" src="images/behance-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/dribbble-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/envato-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/facebook-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/github-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/google-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/rss-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/twitter-24.png"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="assets/jquery.js"></script>
+        <script type="text/javascript" src="assets/foundation/foundation.js"></script>
+        <script type="text/javascript">
+            $(document).foundation();
+        </script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                loadAccountInfo();   
+            });
+            
+            var accountInfo = null;
+            
+            function loadAccountInfo() {
+                $.post('php/select_account.php',
+                    {
+                        // none
+                    },
+                    function(data, status) {
+                        if (String(data) == '[]') {
+                            $('.top-bar-right #responsive-menu').removeClass('hide');
+                            solveDropdownIssue();
+                        }
+                        else {
+                            $('.top-bar-right #registered-member').removeClass('hide');
+                            $('#new-discussion-button').removeClass('hide');
+                            $('#logout-container').removeClass('hide');
+                            accountInfo = $.parseJSON(data);
+                            $('#top-welcome').find('.username').text(accountInfo[0].username);
+                            if (accountInfo[0].type == 1) {
+                                $('#top-welcome h6 .usertype').text('Code Dreamer Administrator');
+                                $('#delete-answer-button').removeClass('hide');
+                            }
+                            else {
+                                $('#top-welcome h6 .usertype').text('Code Dreamer Member');
+                            } 
+                            $('#top-avatar img').attr('src', accountInfo[0].avatar);
+                            solveDropdownIssue();
+                        }
+                    }
+                );
+            }
+            
+            function solveDropdownIssue() {
+                $('#top-avatar').children('img').click();
+                $('#top-avatar').children('img').click();
+                fetchTopic();
+            }
+            
+            var topicList = null;
+
+            function fetchTopic() {
+                $.post('php/select_topic.php',
+                    {
+                        // none
+                    },
+                    function(data, status) {
+                        topicList = $.parseJSON(data);
+                        for(i=0; i<topicList.length; i++) {
+                            $('#topic-item-model li a').text(topicList[i].topic);
+                            $('#topic-item-model li a').attr('onclick', 'selectTopic('+topicList[i].topicId+')');
+                            var topicItem = $('#topic-item-model').html();
+                            $('.side-nav-list').append(topicItem);
+                        }
+                        autoSelectTopic();
+                    }
+                );    
+            }
+            
+            function autoSelectTopic() {
+                $.post('php/session_ids.php',
+                    {
+                        trigger_function: 'get_topic_id',
+                        selected_id: 0
+                    },
+                    function(data, status) {
+                        if (Number(data) == 0) {
+                            
+                        }
+                        else if (Number(data) > 0) {
+                            var topicId = Number(data);
+                            var list = $('.side-nav-list').children();
+                            for (i=0; i<topicList.length; i++) {
+                                if (topicId == Number(topicList[i].topicId)) {
+                                    for (j=0; j<list.length; j++) {
+                                        if (topicList[i].topic == $(list[j]).children('a').text()) {
+                                            $(list[j]).attr('class', 'active');
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }   
+                        else {
+                            
+                        }
+                    }
+                );
+                fetchDiscussion();
+            }
+            
+            function selectTopic(topicId) {
+                $.post('php/session_ids.php',
+                    {
+                        trigger_function: 'set_topic_id',
+                        selected_id: topicId
+                    },
+                    function(data, status) {
+                        if (Number(data) > 0) {
+                            console.log('SUCCESS! Sending topic id to the server.');
+                            window.location.assign('discussion.html');
+                        }
+                        else {
+                            console.log('FAILED! Sending topic id to the server.');
+                        }
+                    }
+                );
+            }
+            
+            var discussion = null;
+            
+            function fetchDiscussion() {
+                $.post('php/select_discussion1.php',
+                    {
+                        // none
+                    },
+                    function(data, status) {
+                        discussion = $.parseJSON(data);
+                        $('.discussion-item').find('.discussion').text(discussion[0].discussion);
+                        $('.discussion-item').find('.posted-by').text(discussion[0].addedBy);
+                        $('.duscussion-item').find('.posted-time').text(discussion[0].timeAdded);
+                        $('.discussion-item').find('.views-number').text(discussion[0].viewsCounter);
+                        $('.discussion-item').find('.answers-number').text(discussion[0].answersCounter);
+                        fetchDiscussionExplaination();
+                    }
+                );
+            }
+            
+            function fetchDiscussionExplaination() {
+                $.post('php/select_discussion2.php',
+                    {
+                        // none
+                    },
+                    function(data, status) {
+                        $('.discussion-item').find('.explaination').text(String(data));
+                        fetchDiscussionCode();
+                    }
+                );
+            }
+            
+            function fetchDiscussionCode() {
+                $.post('php/select_discussion3.php',
+                    {
+                        // none
+                    },
+                    function(data, status) {
+                        $('.discussion-item').find('.computer-code').children('pre').text(String(data));
+                        fetchDiscussionAvatar();
+                    }
+                );
+            }
+            
+            function fetchDiscussionAvatar() {
+                $.post('php/select_account_avatar.php',
+                    {
+                        username: discussion[0].addedBy
+                    },
+                    function(data, status) {
+                        if (String(data) != 'error') {
+                            console.log('SUCCESS! Loading '+discussion.addedBy+' avatar.');
+                            $('.discussion-item .avatar').attr('src', String(data));
+                            fetchAnswer();
+                        }
+                        else {
+                            console.log('FAILED! Loading '+discussion.addedBy+' avatar.');
+                        }
+                    }
+                );
+            }
+            
+            var answerList = null;
+            var index = 0;
+            
+            function fetchAnswer() {
+                $.post('php/select_answer1.php',
+                    {
+                        // none
+                    },
+                    function(data, status) {
+                        answerList = $.parseJSON(data);
+                        $('.answer-header').text(answerList.length + " Answers");
+                        for (i=0; i<answerList.length; i++) {
+                            $('#answer-item-model').find('.answer-item').attr('id', answerList[i].answerId);
+                            $('#answer-item-model').find('.posted-by').text(answerList[i].addedBy);
+                            $('#answer-item-model').find('.posted-time').text(answerList[i].timeAdded); 
+                            var answerItem = $('#answer-item-model').html();
+                            $('.answer-list').append(answerItem);
+                        }
+                        fetchAnswerExplanation();
+                    }
+                );
+            }
+            
+            function fetchAnswerExplanation() {
+                var list = $('.answer-list').children('li');
+                $.post('php/select_answer2.php',
+                    {
+                        answer_id: Number($(list).eq(index).attr('id'))
+                    },
+                    function(data, status) {
+                        if (String(data) != 'error') {
+                            $('.answer-list').children('li').eq(index).find('.explanation').text(String(data));
+                            index++;
+                            if (index < list.length) {
+                                fetchAnswerExplanation();
+                            }
+                            else {
+                                index = 0;
+                                fetchAnswerCode();
+                            }
+                        }
+                        else {
+                            console.log('FAILED! Loading answer explaination from the server.');
+                        }
+                    }
+                ); 
+            }
+            
+            function fetchAnswerCode() {
+                var list = $('.answer-list').children('li');
+                $.post('php/select_answer3.php',
+                    {
+                        answer_id: Number($(list).eq(index).attr('id'))
+                    },
+                    function(data, status) {
+                        if (String(data) != 'error') {
+                            $('.answer-list').children('li').eq(index).find('.computer-code pre').text(String(data));
+                            index++; 
+                            if (index < list.length) {
+                                fetchAnswerCode();
+                            }
+                            else {
+                                index = 0;
+                                fetchAnswerAvatar();
+                            }
+                        }
+                        else {
+                            console.log('FAILED! Loading answer code from the server.');    
+                        }
+                    }
+                );   
+            }
+            
+            function fetchAnswerAvatar() {
+                var list = $('.answer-list').children('li');
+                $.post('php/select_account_avatar.php',
+                    {
+                        username: String($(list).eq(index).find('.posted-by').text())
+                    },
+                    function(data, status) {
+                        if (String(data) != 'error') {
+                            console.log('SUCCESS! Loading '+$(list).eq(index).find('.posted-by').text()+' avatar.');
+                            $('.answer-list').children('li').eq(index).find('.avatar').attr('src', String(data));
+                            index++;
+                            if (index < list.length) {
+                                fetchAnswerAvatar();
+                            }
+                            else {
+                                index = 0;
+                                fetchResources();
+                            }
+                        }
+                        else {
+                            console.log('FAILED! Loading '+$(list).eq(index).find('.posted-by').text()+' avatar.');
+                        }
+                    }
+                );
+            }
+            
+            var resourcesList = null;
+            
+            function fetchResources() {
+                var list = $('.answer-list').children('li');
+                $.post('php/select_resources.php',
+                    {
+                        answer_id: Number($(list).eq(index).attr('id'))
+                    },
+                    function(data, status) {
+                        resourcesList = $.parseJSON(data);
+                        for (i=0; i<resourcesList.length; i++) {
+                            $('#resources-item-model').find('.resources-item').children('a').text(resourcesList[i].title);
+                            $('#resources-item-model').find('.resources-item').children('a').attr('href', resourcesList[i].site);
+                            var resourcesItem = $('#resources-item-model').html();
+                            $('.answer-list').children('li').eq(index).find('.resources-list').prepend(resourcesItem);
+                        }
+                        index++;
+                        if (index < list.length) {
+                            fetchResources();
+                        }
+                        else {
+                            index = 0;
+                            fetchAllComment();
+                        }
+                    }
+                );
+            }
+            
+            var commentList = null;
+            
+            function fetchAllComment() {
+                $('.answer-list').children('li').eq(index).find('.comment-list').empty();
+                $('.commentator-input').val('');
+                var list = $('.answer-list').children('li');
+                $.post('php/select_comment.php',
+                    {
+                        answer_id: Number($(list).eq(index).attr('id'))
+                    },
+                    function(data, status) {
+                        commentList = $.parseJSON(data);
+                        for (i=0; i<commentList.length; i++) {
+                            $('#comment-item-model').children('.comment-item').find('.comment').text(commentList[i].comment);
+                            $('#comment-item-model').children('.comment-item').attr('id', commentList[i].commentId);
+                            $('#comment-item-model').children('.comment-item').find('.comment-posted-by').text(commentList[i].addedBy);
+                            var commentItem = $('#comment-item-model').html();
+                            $('.answer-list').children('li').eq(index).find('.comment-list').append(commentItem);
+                        }
+                        index++;
+                        if (index < list.length) {
+                            fetchAllComment();
+                        }
+                        else {
+                            if (accountInfo == null) {
+                                $('.comment-area').children('.commentator').addClass('hide');
+                            }
+                            else {
+                                $('.comment-area').children('.commentator').find('.avatar').attr('src', accountInfo[0].avatar);
+                            }
+                            index = 0;
+                            fetchCommentAvatar();
+                        }
+                    }
+                );
+            }
+            
+            var commentIndex = 0;
+            
+            function fetchCommentAvatar() {
+                var answerList = $('.answer-list').children('.answer-item');
+                var commentList = $(answerList).eq(index).find('.comment-list').children('.comment-item');
+                $.post('php/select_account_avatar.php',
+                    {
+                        username: String($(commentList).eq(commentIndex).find('.comment-posted-by').text())
+                    },
+                    function(data, status) {
+                        if (String(data) != 'error') {
+                            console.log('SUCCESS! Loading comment #id: '+$(commentList).eq(commentIndex).attr('id')+' avatar');
+                            $(commentList).eq(commentIndex).find('.avatar').attr('src', String(data));
+                        }
+                        else {
+                            console.log('FAILED! Loading comment #id: '+$(commentList).eq(commentIndex).attr('id')+' avatar');
+                        }
+                        commentIndex++;
+                        if (commentIndex < commentList.length) {
+                            fetchCommentAvatar();
+                        }
+                        else {
+                            index++;
+                            if (index < answerList.length) {
+                                commentIndex = 0;
+                                fetchCommentAvatar();
+                            }
+                            else {
+                                index = 0;
+                            }
+                        }
+                    }
+                );
+            }
+            
+            function submitComment(button) {
+                index = Number($(button).parents('.answer-item').attr('id'));
+                var comment = $(button).parents('.commentator').find('.commentator-input').val();
+                $.post('php/insert_comment.php',
+                    {
+                        answer_id: index,
+                        comment: comment,
+                        added_by: accountInfo[0].username
+                    },
+                    function(data, status) {
+                        if (Number(data) > 0) {
+                            console.log('SUCCESS! Sending comment to the server.'); 
+                            window.location.assign('answer.html');
+                            //fetchComment(button);
+                        }
+                        else {
+                            console.log('FAILED! Sending comment to the server.');  
+                        }
+                    }
+                );
+            }
+            
+            function confirmDeleteAnswer(button) {
+                var answerId = $(button).parents('.answer-item').attr('id');
+                var explanation = $(button).parents('.answer-item').find('.explanation').text();
+                var postedBy = $(button).parents('.answer-item').find('.posted-by').text();
+                var postedTime = $(button).parents('.answer-item').find('.posted-time').text();
+                $('#delete-answer-reveal').find('.answer').text(explanation);
+                $('#delete-answer-reveal').find('.posted-by').text(postedBy);
+                $('#delete-answer-reveal').find('.posted-time').text(postedTime);
+                $('#delete-answer-reveal').find('.yes-button').attr('onclick', 'deleteAnswer('+answerId+')');
+                $('#delete-reveal-button').click();
+            }
+            
+            function deleteAnswer(answerId) {
+                $.post('php/delete_answer.php',
+                    {
+                        answer_id: Number(answerId)
+                    },
+                    function(data, status) {
+                        if (String(data) != 'error') {
+                            console.log('SUCCESS! Deleting answer '+ answerId);
+                            window.location.assign('answer.html');
+                        }
+                        else {
+                            console.log('FAILED! Deleting answer '+ answerId);   
+                        }
+                    }
+                );
+            }
+            
+        </script>
+    </body>
+    <footer>
+    </footer>
+</html>

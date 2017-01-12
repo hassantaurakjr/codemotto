@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>codemotto.edu.ph</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">    
+        <link rel="stylesheet" href="assets/foundation/foundation-flex.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+    
+    <body>      
+        <div class="row">
+            <div id="main-area" class="small-12 medium-12 large-12 columns">
+                
+                <div id="main-top-bar" class="row align-middle">
+                    <div class="small-12 medium-12 large-12 columns">
+                        <div class="top-bar">
+                            <div class="top-bar-left">
+                                <a href="#"><img data-interchange="[images/logo-small.png, small], [images/logo-medium.png, medium], [images/logo-large.png, large]"></a>
+                            </div>
+                            <div class="top-bar-right">
+                                <ul class="menu align-right">
+                                    <li id="top-welcome" class="show-for-medium"><h6><span class="username"> Username </span><br><span class="usertype"> User Type </span></h6></li>
+                                    <li id="top-avatar">
+                                        <img class="thumbnail-round" src="images/user-image.jpg" alt="User Image">  
+                                    </li>                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /End Tob Bar -->
+                
+                <div id="upper-menu" class="row align-middle">
+                    <div class="menu-list">
+                        <a class="">Home</a>
+                        <a href="discussion.html" class="active">Discussion</a>
+                        <div id="logout-container" class="hide">
+                            <a href="index.html" class="button alert float-right">Log Out</a>
+                        </div>
+                    </div>
+                </div><!-- /End Upper Menu -->
+                
+                <div id="main-content" class="row">
+                    
+                    <div class="small-12 medium-12 large-8 columns">
+                        <div class="row">
+                            <h3 class="discussion-header">New Discussion</h3>
+                        </div>  
+                        <hr>
+                        <ul class="discussion-list"> 
+                            <li class="discussion-item">
+                                <div class="row">
+                                    <div class="small-12 medium-2 large-2 columns show-for-medium">
+                                        <img class="avatar thumbnail-round" src="images/user-image.jpg" alt="User Image">
+                                    </div>
+                                    <div class="small-12 medium-10 large-10 columns">
+                                        <label id="discussion-label"> Discussion
+                                            <input class="discussion-input" type="text" placeholder="Write a discussion/question.">
+                                            <span id="discussion-error" class="form-error">
+                                                Please enter discussion.
+                                            </span>
+                                        </label>
+                                        <label>
+                                            <input id="toggler" type="checkbox" data-toggle="sample-code">
+                                            I have a sample code to show (*optional).
+                                        </label>
+                                        <div id="sample-code" class="hide" data-toggler="hide">
+                                            <label id="explanation-label">Explanation
+                                                <textarea class="explanation-input" placeholder="Give some explanation about the code."></textarea>
+                                                <span id="explanation-error" class="form-error">
+                                                    Please enter an explanation.
+                                                </span>
+                                            </label>
+                                            <label id="code-label">Code
+                                                <textarea class="code-input" placeholder="Write your code."></textarea>
+                                                <span id="code-error" class="form-error">
+                                                    Please enter a computer code.
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <p>Select a topic to classify discussion</p>    
+                                        <div id="topic_option" class="small-12 medium-12 large-12">
+                                            <!-- The list of topic from the database will be display here after this page loads. -->
+                                        </div>
+                                        <div id="response-success" class="callout hide success">
+                                            <h5>Submit Successful</h5>
+                                            <p>The new discussion is successfully submitted.</p>
+                                            <button id="close-button-success" class="close-button" type="button">
+                                                <span>&times;</span>
+                                            </button>
+                                        </div>
+                                        <div id="response-alert" class="callout hide alert">
+                                            <h5>Submit Failed</h5>
+                                            <p>The new discussion is failed to submit. <br> Please do not use this character ('), this might cause the problem.</p>
+                                            <button id="close-button-alert" class="close-button" type="button">
+                                                <span>&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <hr>
+                        <button id="submit-button" onclick="submitDiscussion()" class="button float-right">SUBMIT</button>
+                        <!-- Hidden Reveal Code -->
+                        <div class="hide">
+
+                            <button id="success-reveal-button" data-open="discussion-success-reveal"></button>
+
+                            <div id="discussion-success-reveal" class="reveal medium" data-reveal>  
+                                <h4 class="header subheader">Submit Successful</h4>
+                                <div class="row">
+                                    <div class="small-12 medium-12 large-12 columns">
+                                        <p>The discussion is successfully submitted.</p>
+                                        <a id="success-reveal-close" class="float-right" data-close><strong>Okay</strong></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button id="failed-reveal-button" data-open="discussion-failed-reveal"></button>
+
+                            <div id="discussion-failed-reveal" class="reveal medium" data-reveal>  
+                                <h4 class="header subheader">Submit Failed</h4>
+                                <div class="row">
+                                    <div class="small-12 medium-12 large-12 columns">
+                                        <p>The discussion is failed to submit. <br> Please do not use this character ('), this might cause the problem.</p>
+                                        <a id="failed-reveal-close" class="float-right" data-close><strong>Okay</strong></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- /End Hidden Reveal Code -->
+                    </div>
+                    
+                    <div class="small-12 medium-12 large-4 columns show-for-large">
+                        <div class="row">
+                            <h6><strong>DISCUSSION TOPIC</strong></h6>
+                        </div>
+                        <ul class="menu vertical side-nav-list">
+                            <!-- List of topic item. -->
+                        </ul>
+                        
+                        <!-- Hidden topic item. -->
+                        <div id="topic-item-model" class="hide">
+                            <li class="topic-item"><a></a></li>
+                        </div>
+                    </div>
+                    
+                </div><!-- /End Content -->
+                
+                <div id="main-footer" class="row">
+                    <div class="small-12 medium-12 large-12 columns">
+                        <div class="row hide-for-small-only">
+                            <img src="images/code-dreamer.png">
+                        </div>
+                        <div class="row align-middle">
+                            <div class="small-12 medium-12 large-6 columns">
+                                 <h6><small>© Copyright 2016 - <a href="#">blacktheme.com.ph</a> | created by <a href="#">Code Dreamer Group</a></small></h6>
+                            </div>
+                            <div class="small-12 medium-6 large-6 columns show-for-large">
+                                <ul class="menu align-right">
+                                    <li><a href="#"><img class="thumbnail-round" src="images/behance-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/dribbble-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/envato-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/facebook-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/github-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/google-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/rss-24.png"></a></li>
+                                    <li><a href="#"><img class="thumbnail-round" src="images/twitter-24.png"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /End Footer -->
+
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="assets/jquery.js"></script>
+        <script type="text/javascript" src="assets/foundation/foundation.js"></script>
+        <script type="text/javascript">
+            $(document).foundation();
+        </script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                // Load account information
+                loadAccountInfo(); 
+                
+                $('.discussion-input').focusin(function() {
+                    $('#discussion-label').removeClass('is-invalid-label');
+                    $('.discussion-input').removeClass('is-invalid-input');
+                    $('#discussion-error').removeClass('is-visible');
+                });
+                
+                $('.discussion-input').focusout(function() {
+                    var discussion = $('.discussion-input').val();
+                    if (discussion == null || discussion == "") {
+                        $('#discussion-label').addClass('is-invalid-label');
+                        $('.discussion-input').addClass('is-invalid-input');
+                        $('#discussion-error').addClass('is-visible');
+                    }
+                    else {
+                        $('#discussion-label').removeClass('is-invalid-label');
+                        $('.discussion-input').removeClass('is-invalid-input');
+                        $('#discussion-error').removeClass('is-visible');
+                    }
+                });
+                
+                $('.explanation-input').focusin(function() {
+                    $('#explanation-label').removeClass('is-invalid-label');
+                    $('.explanation-input').removeClass('is-invalid-input');
+                    $('#explanation-error').removeClass('is-visible');
+                });
+                
+                $('.explanation-input').focusout(function() {
+                    var explanation = $('.explanation-input').val();
+                    if (explanation == null || explanation == "") {
+                        $('#explanation-label').addClass('is-invalid-label');
+                        $('.explanation-input').addClass('is-invalid-input');
+                        $('#explanation-error').addClass('is-visible');
+                    }
+                    else {
+                        $('#explanation-label').removeClass('is-invalid-label');
+                        $('.explanation-input').removeClass('is-invalid-input');
+                        $('#explanation-error').removeClass('is-visible');
+                    }
+                });
+                
+                $('.code-input').focusin(function() {
+                    $('#code-label').removeClass('is-invalid-label');
+                    $('.code-input').removeClass('is-invalid-input');
+                    $('#code-error').removeClass('is-visible');
+                });
+                
+                $('.code-input').focusout(function() {
+                    var code = $('.code-input').val();
+                    if (code == null || code == "") {
+                        $('#code-label').addClass('is-invalid-label');
+                        $('.code-input').addClass('is-invalid-input');
+                        $('#code-error').addClass('is-visible');
+                    }
+                    else {
+                        $('#code-label').removeClass('is-invalid-label');
+                        $('.code-input').removeClass('is-invalid-input');
+                        $('#code-error').removeClass('is-visible');
+                    }
+                });
+                
+                $('#close-button-success').click(function() {
+                    $('#response-success').addClass('hide');
+                    $('#submit-button').removeClass('hide');
+                    $('.discussion-input').val("");
+                    $('.explanation-input').val("");
+                    $('.code-input').val("");
+                });
+                
+                $('#close-button-alert').click(function() {
+                    $('#response-alert').addClass('hide');
+                    $('#submit-button').removeClass('hide');
+                    $('.discussion-input').val("");
+                    $('.explanation-input').val("");
+                    $('.code-input').val("");
+                });
+                
+            });
+                
+            var accountInfo = null;
+            
+            function loadAccountInfo() {
+                $.post('php/select_account.php',
+                    {
+                        // none
+                    },
+                    function(data, status) {
+                        accountInfo = $.parseJSON(data);        
+                        $('#top-welcome h6 .username').text(accountInfo[0].username);
+                        if (accountInfo[0].type == 1) {
+                            $('#top-welcome h6 .usertype').text('Code Dreamer Administrator');
+                        }
+                        else {
+                            $('#top-welcome h6 .usertype').text('Code Dreamer Member');
+                        } 
+                        $('#top-avatar img').attr('src', accountInfo[0].avatar);
+                        $('.discussion-item .avatar').attr('src', accountInfo[0].avatar);
+                        $('#logout-container').removeClass('hide');
+                        solveDropdownIssue();
+                    }
+                );
+            }
+            
+            function solveDropdownIssue() {
+                $('#top-avatar').children('img').click();
+                $('#top-avatar').children('img').click();
+                fetchTopic();
+            }
+    
+            var topicList = null;
+
+            function fetchTopic() {
+                $.post('php/select_topic.php',
+                    {
+                        // none
+                    },
+                    function(data, status) {
+                        topicList = $.parseJSON(data);
+                        for(i=0; i<topicList.length; i++) {
+                            $('#topic-item-model li a').text(topicList[i].topic);
+                            $('#topic-item-model li a').attr('onclick', 'selectTopic('+topicList[i].topicId+')');
+                            var topicItem = $('#topic-item-model').html();
+                            $('.side-nav-list').append(topicItem);
+                            var topicRadioItem = '<label><input type="radio" name="'+topicList[i].topic+'">'+topicList[i].topic+'</label>';
+                            $('#topic_option').append(topicRadioItem);
+                        }
+                        $('#topic_option label:first input').attr('checked', true);
+                        $('#topic_option label input').attr('onclick', 'selectRadioTopic()');
+                        autoSelectTopic();
+                    }
+                );    
+            }
+            
+            function autoSelectTopic() {
+                $.post('php/session_ids.php',
+                    {
+                        trigger_function: 'get_topic_id',
+                        selected_id: 0
+                    },
+                    function(data, status) {
+                        if (Number(data) == 0) {
+                            
+                        }
+                        else if (Number(data) > 0) {
+                            var topicId = Number(data);
+                            var list = $('.side-nav-list').children();
+                            for (i=0; i<topicList.length; i++) {
+                                if (topicId == Number(topicList[i].topicId)) {
+                                    for (j=0; j<list.length; j++) {
+                                        if (topicList[i].topic == $(list[j]).children('a').text()) {
+                                            $(list[j]).attr('class', 'active');
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }   
+                        else {
+                            
+                        }
+                    }
+                );
+            }
+            
+            function selectTopic(topicId) {
+                $.post('php/session_ids.php',
+                    {
+                        trigger_function: 'set_topic_id',
+                        selected_id: topicId
+                    },
+                    function(data, status) {
+                        if (Number(data) > 0) {
+                            console.log('SUCCESS! Sending topic id to the server.');
+                            window.location.assign('discussion.html');
+                        }
+                        else {
+                            console.log('FAILED! Sending topic id to the server.');
+                        }
+                    }
+                );
+            }
+            
+            function selectRadioTopic() {
+                $('#topic_option label input:not(:focus)').attr('checked', false);
+            }
+            
+            function submitDiscussion() {
+                var topicId = null;
+                var discussion = $('.discussion-input').val();
+                var explanation = $('.explanation-input').val();
+                var code = $('.code-input').val();
+                var topic = $('#topic_option label input:checked').parent().text();
+                for (i=0; i<topicList.length; i++) {
+                    if (topicList[i].topic == topic) {
+                        topicId = Number(topicList[i].topicId);
+                        break;
+                    }
+                }
+                if (discussion == null || discussion == "") {
+                    $('#discussion-label').addClass('is-invalid-label');
+                    $('.discussion-input').addClass('is-invalid-input');
+                    $('#discussion-error').addClass('is-visible');
+                }
+                else if ($('#sample-code').hasClass('hide') == false && (explanation == null || explanation == "")) {
+                    $('#explanation-label').addClass('is-invalid-label');
+                    $('.explanation-input').addClass('is-invalid-input');
+                    $('#explanation-error').addClass('is-visible');
+                }
+                else if ($('#sample-code').hasClass('hide') == false && (code == null || code == "")) {
+                    $('#code-label').addClass('is-invalid-label');
+                    $('.code-input').addClass('is-invalid-input');
+                    $('#code-error').addClass('is-visible');
+                }
+                else {
+                    $.post('php/insert_discussion.php',
+                        {
+                            topic_id: topicId,
+                            discussion: discussion,
+                            explanation: explanation,
+                            code: code,
+                            posted_by: accountInfo[0].username
+                        },
+                        function(data, status) {
+                            if (Number(data) > 0) {
+                                console.log('SUCCESS: Inserting new discussion.');
+                                $('#success-reveal-button').click();
+                            }
+                            else {
+                                console.log('FAILED: Inserting new discussion.');
+                                $('#failed-reveal-button').click();
+                            }
+                        }
+                    );   
+                }
+            }
+               
+        </script>
+    </body>
+</html>
