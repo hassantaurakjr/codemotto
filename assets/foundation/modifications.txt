@@ -1,0 +1,4 @@
+
+foundation.css : top-bar - background-color: changed: #e6e6e6 - transparent
+foundation-flex.css top-bar - background-color: changed: #e6e6e6 - transparent
+foundation-rtl.css - top-bar - background-color: changed: #e6e6e6 - transparent
